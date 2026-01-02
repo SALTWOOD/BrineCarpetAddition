@@ -12,7 +12,7 @@ public class BcaSettings {
     public static boolean bcaProtocolEnabled = false;
 
     @Rule(categories = {BCA, PROTOCOL})
-    public static BCA_SYNC_PLAYER_ENTITY_OPTIONS bcaSyncPlayer = BCA_SYNC_PLAYER_ENTITY_OPTIONS.OPS;
+    public static BCA_SYNC_PLAYER_ENTITY_OPTIONS syncPlayer = BCA_SYNC_PLAYER_ENTITY_OPTIONS.OPS;
 
     // optimization
     @Rule(categories = {BCA, RuleCategory.FEATURE})
