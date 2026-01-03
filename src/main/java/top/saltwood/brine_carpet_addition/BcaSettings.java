@@ -22,6 +22,9 @@ public class BcaSettings {
     @Rule(categories = {BCA, RuleCategory.FEATURE})
     public static boolean deathskull = false;
 
+    @Rule(categories = {BCA, RuleCategory.FEATURE})
+    public static boolean emeraldAttractsVillager = false;
+
     public enum BCA_SYNC_PLAYER_ENTITY_OPTIONS {
         NOBODY, BOT, OPS, OPS_AND_SELF, EVERYONE
     }

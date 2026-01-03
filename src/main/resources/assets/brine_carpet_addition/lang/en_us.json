@@ -13,5 +13,7 @@
   "carpet.rule.deathskull.name": "Death Skulls",
   "carpet.rule.deathskull.desc": "When a player dies, a death skull will spawn at the death position, retaining the player's items and half of their experience",
   "carpet.rule.avoidAnvilTooExpensive.name": "Avoid Anvil Too Expensive",
-  "carpet.rule.avoidAnvilTooExpensive.desc": "Allows anvil operations even if the experience cost is higher than 40 levels"
+  "carpet.rule.avoidAnvilTooExpensive.desc": "Allows anvil operations even if the experience cost is higher than 40 levels",
+  "carpet.rule.emeraldAttractsVillager.name": "Emerald Attraction",
+  "carpet.rule.emeraldAttractsVillager.desc": "Holding emeralds or emerald blocks attracts villagers. Villagers will approach faster when you hold an emerald block."
 }

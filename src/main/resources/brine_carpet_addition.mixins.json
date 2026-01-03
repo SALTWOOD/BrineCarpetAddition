@@ -6,7 +6,8 @@
   "mixins": [
     "MixinAnvilScreenHandler",
     "MixinPlayerSkullBlock",
-    "MixinSkullBlockEntity"
+    "MixinSkullBlockEntity",
+    "MixinVillagerEntity"
   ],
   "injectors": {
     "defaultRequire": 1

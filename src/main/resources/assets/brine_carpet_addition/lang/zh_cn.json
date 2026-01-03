@@ -13,5 +13,7 @@
   "carpet.rule.deathskull.name": "死亡头颅",
   "carpet.rule.deathskull.desc": "玩家死亡后会在死亡附近的位置生成死亡头颅，保留玩家身上的物品以及一半的经验",
   "carpet.rule.avoidAnvilTooExpensive.name": "防止铁砧过于昂贵",
-  "carpet.rule.avoidAnvilTooExpensive.desc": "即使经验花销高于 40 也能够进行铁砧操作"
+  "carpet.rule.avoidAnvilTooExpensive.desc": "即使经验花销高于 40 也能够进行铁砧操作",
+  "carpet.rule.emeraldAttractsVillager.name": "绿宝石吸引村民",
+  "carpet.rule.emeraldAttractsVillager.desc": "手持绿宝石和绿宝石块能使村民靠近。手持绿宝石块时村民靠近的速度会更快。"
 }
