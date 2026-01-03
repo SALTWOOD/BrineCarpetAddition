@@ -4,9 +4,11 @@ import carpet.CarpetExtension;
 import carpet.CarpetServer;
 import carpet.utils.Translations;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -59,6 +61,8 @@ public class Main implements ModInitializer, CarpetExtension {
                     break;
             }
         });
+
+        EntitySleepEvents.ALLOW_SLEEP_TIME.register((player, sleepingPos, vanillaResult) -> BcaSettings.daydream ? ActionResult.SUCCESS : ActionResult.PASS);
     }
 
     @Override

@@ -6,6 +6,7 @@
   "mixins": [
     "MixinAnvilScreenHandler",
     "MixinPlayerSkullBlock",
+    "MixinServerWorld",
     "MixinSkullBlockEntity",
     "MixinVillagerEntity"
   ],

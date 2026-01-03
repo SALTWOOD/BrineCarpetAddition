@@ -15,5 +15,7 @@
   "carpet.rule.avoidAnvilTooExpensive.name": "防止铁砧过于昂贵",
   "carpet.rule.avoidAnvilTooExpensive.desc": "即使经验花销高于 40 也能够进行铁砧操作",
   "carpet.rule.emeraldAttractsVillager.name": "绿宝石吸引村民",
-  "carpet.rule.emeraldAttractsVillager.desc": "手持绿宝石和绿宝石块能使村民靠近。手持绿宝石块时村民靠近的速度会更快。"
+  "carpet.rule.emeraldAttractsVillager.desc": "手持绿宝石和绿宝石块能使村民靠近。手持绿宝石块时村民靠近的速度会更快。",
+  "carpet.rule.daydream.name": "白日梦",
+  "carpet.rule.daydream.desc": "允许玩家在白天睡觉"
 }

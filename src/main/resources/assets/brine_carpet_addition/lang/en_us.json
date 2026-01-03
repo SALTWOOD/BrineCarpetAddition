@@ -15,5 +15,7 @@
   "carpet.rule.avoidAnvilTooExpensive.name": "Avoid Anvil Too Expensive",
   "carpet.rule.avoidAnvilTooExpensive.desc": "Allows anvil operations even if the experience cost is higher than 40 levels",
   "carpet.rule.emeraldAttractsVillager.name": "Emerald Attraction",
-  "carpet.rule.emeraldAttractsVillager.desc": "Holding emeralds or emerald blocks attracts villagers. Villagers will approach faster when you hold an emerald block."
+  "carpet.rule.emeraldAttractsVillager.desc": "Holding emeralds or emerald blocks attracts villagers. Villagers will approach faster when you hold an emerald block.",
+  "carpet.rule.daydream.name": "Daydream",
+  "carpet.rule.daydream.desc": "Allows players to sleep during the day"
 }
