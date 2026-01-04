@@ -3,18 +3,24 @@ package top.saltwood.brine_carpet_addition;
 import carpet.CarpetExtension;
 import carpet.CarpetServer;
 import carpet.utils.Translations;
+import com.mojang.brigadier.CommandDispatcher;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
+import net.fabricmc.fabric.api.event.player.UseEntityCallback;
+import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.Nullable;
+import top.saltwood.brine_carpet_addition.command.ViewCommand;
 import top.saltwood.brine_carpet_addition.network.PcaProtocol;
 import top.saltwood.brine_carpet_addition.util.DeathHandle;
+import top.saltwood.brine_carpet_addition.util.ViewInventoryHandler;
 
 import java.util.Map;
 
@@ -32,7 +38,14 @@ public class Main implements ModInitializer, CarpetExtension {
     @Override
     public void onInitialize() {
         CarpetServer.manageExtension(this);
+        PcaProtocol.init();
         registerPlayerDeathEvent();
+        UseEntityCallback.EVENT.register(ViewInventoryHandler::useOnPlayer);
+    }
+
+    @Override
+    public void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess commandBuildContext) {
+        ViewCommand.register(dispatcher);
     }
 
     private void registerPlayerDeathEvent() {
@@ -67,7 +80,6 @@ public class Main implements ModInitializer, CarpetExtension {
 
     @Override
     public void onServerLoadedWorlds(MinecraftServer server) {
-        PcaProtocol.init();
         Main.SERVER = server;
     }
 

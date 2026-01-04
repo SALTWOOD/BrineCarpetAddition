@@ -122,11 +122,11 @@ public class PcaProtocol {
                     if (!(entity instanceof EntityPlayerMPFake)) return;
                 }
                 case OPS -> {
-                    if (!(entity instanceof EntityPlayerMPFake) && Main.SERVER.getPermissionLevel(player.getGameProfile()) < 2)
+                    if (!(entity instanceof EntityPlayerMPFake) && player.hasPermissionLevel(2))
                         return;
                 }
                 case OPS_AND_SELF -> {
-                    if (!(entity instanceof EntityPlayerMPFake) && Main.SERVER.getPermissionLevel(player.getGameProfile()) < 2 && entity != player)
+                    if (!(entity instanceof EntityPlayerMPFake) && player.hasPermissionLevel(2) && entity != player)
                         return;
                 }
                 case EVERYONE -> {

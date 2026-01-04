@@ -17,5 +17,12 @@
   "carpet.rule.emeraldAttractsVillager.name": "绿宝石吸引村民",
   "carpet.rule.emeraldAttractsVillager.desc": "手持绿宝石和绿宝石块能使村民靠近。手持绿宝石块时村民靠近的速度会更快。",
   "carpet.rule.daydream.name": "白日梦",
-  "carpet.rule.daydream.desc": "允许玩家在白天睡觉。"
+  "carpet.rule.daydream.desc": "允许玩家在白天睡觉。",
+  "carpet.rule.viewPlayerInv.name": "查看玩家背包",
+  "carpet.rule.viewPlayerInv.desc": "通过右键玩家查看玩家背包（也可以使用 /view 命令）",
+  "carpet.rule.viewPlayerInv.extra.0": "NOBODY：不启用此功能",
+  "carpet.rule.viewPlayerInv.extra.1": "BOT：所有玩家都可以右键可以查看召唤出的 bot 的背包",
+  "carpet.rule.viewPlayerInv.extra.2": "OPS：权限等级为 2 或更高的玩家可以右键查看任意玩家的背包",
+  "carpet.rule.viewPlayerInv.extra.3": "OPS_AND_SELF：同上（你怎么右键自己的？）",
+  "carpet.rule.viewPlayerInv.extra.4": "EVERYONE：所有人都可以右键查看任意玩家的背包"
 }

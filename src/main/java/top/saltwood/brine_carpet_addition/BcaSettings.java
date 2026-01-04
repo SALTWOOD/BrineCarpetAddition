@@ -12,7 +12,7 @@ public class BcaSettings {
     public static boolean pcaProtocolEnabled = false;
 
     @Rule(categories = {BCA, PROTOCOL})
-    public static BCA_SYNC_PLAYER_ENTITY_OPTIONS syncPlayer = BCA_SYNC_PLAYER_ENTITY_OPTIONS.OPS;
+    public static PLAYER_SELECTOR syncPlayer = PLAYER_SELECTOR.OPS;
 
     // optimization
     @Rule(categories = {BCA, RuleCategory.FEATURE})
@@ -28,7 +28,10 @@ public class BcaSettings {
     @Rule(categories = {BCA, RuleCategory.FEATURE})
     public static boolean daydream = false;
 
-    public enum BCA_SYNC_PLAYER_ENTITY_OPTIONS {
+    @Rule(categories = {BCA, RuleCategory.FEATURE})
+    public static PLAYER_SELECTOR viewPlayerInv = PLAYER_SELECTOR.NOBODY;
+
+    public enum PLAYER_SELECTOR {
         NOBODY, BOT, OPS, OPS_AND_SELF, EVERYONE
     }
 }

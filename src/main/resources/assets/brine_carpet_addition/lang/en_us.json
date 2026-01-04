@@ -17,5 +17,12 @@
   "carpet.rule.emeraldAttractsVillager.name": "Emerald Attraction",
   "carpet.rule.emeraldAttractsVillager.desc": "Holding emeralds or emerald blocks attracts villagers. Villagers will approach faster when you hold an emerald block.",
   "carpet.rule.daydream.name": "Daydream",
-  "carpet.rule.daydream.desc": "Allows players to sleep during the day."
+  "carpet.rule.daydream.desc": "Allows players to sleep during the day.",
+  "carpet.rule.viewPlayerInv.name": "View Player Inventory",
+  "carpet.rule.viewPlayerInv.desc": "View a player's inventory by right-clicking on them (you can also use /view command)",
+  "carpet.rule.viewPlayerInv.extra.0": "NOBODY: Disable this feature",
+  "carpet.rule.viewPlayerInv.extra.1": "BOT: All players can right-click to view the inventory of summoned bots",
+  "carpet.rule.viewPlayerInv.extra.2": "OPS: Players with permission level 2 or higher can right-click to view any player's inventory",
+  "carpet.rule.viewPlayerInv.extra.3": "OPS_AND_SELF: Same as \"OPS\" (Wait, how did you do that???)",
+  "carpet.rule.viewPlayerInv.extra.4": "EVERYONE: All players can right-click to view any player's inventory"
 }
