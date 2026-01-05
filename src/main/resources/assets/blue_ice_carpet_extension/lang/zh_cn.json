@@ -24,5 +24,7 @@
   "carpet.rule.viewPlayerInv.extra.1": "BOT：所有玩家都可以右键可以查看召唤出的 bot 的背包",
   "carpet.rule.viewPlayerInv.extra.2": "OPS：权限等级为 2 或更高的玩家可以右键查看任意玩家的背包",
   "carpet.rule.viewPlayerInv.extra.3": "OPS_AND_SELF：同上（你怎么右键自己的？）",
-  "carpet.rule.viewPlayerInv.extra.4": "EVERYONE：所有人都可以右键查看任意玩家的背包"
+  "carpet.rule.viewPlayerInv.extra.4": "EVERYONE：所有人都可以右键查看任意玩家的背包",
+  "carpet.rule.biceUpdateCheck.name": "BlueIceCarpetExtension 模组更新检查",
+  "carpet.rule.biceUpdateCheck.desc": "服务器启动时自动在 GitHub 上检查 BlueIceCarpetExtension 的新版本，并在管理员加入游戏时发送提醒。"
 }

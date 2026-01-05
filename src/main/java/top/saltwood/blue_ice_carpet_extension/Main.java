@@ -7,7 +7,9 @@ import com.mojang.brigadier.CommandDispatcher;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.event.v1.EntitySleepEvents;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
+import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.command.ServerCommandSource;
@@ -27,6 +29,7 @@ import java.util.Map;
 public class Main implements ModInitializer, CarpetExtension {
     public static final String MOD_ID = "blue_ice_carpet_extension";
     public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
+    public static final String VERSION = FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow(RuntimeException::new).getMetadata().getVersion().getFriendlyString();
 
     @Nullable
     public static MinecraftServer SERVER = null;
@@ -38,9 +41,6 @@ public class Main implements ModInitializer, CarpetExtension {
     @Override
     public void onInitialize() {
         CarpetServer.manageExtension(this);
-        PcaProtocol.init();
-        registerPlayerDeathEvent();
-        UseEntityCallback.EVENT.register(ViewInventoryHandler::useOnPlayer);
     }
 
     @Override
@@ -76,6 +76,13 @@ public class Main implements ModInitializer, CarpetExtension {
         });
 
         EntitySleepEvents.ALLOW_SLEEP_TIME.register((player, sleepingPos, vanillaResult) -> ModSettings.daydream ? ActionResult.SUCCESS : ActionResult.PASS);
+
+        PcaProtocol.init();
+        registerPlayerDeathEvent();
+        UseEntityCallback.EVENT.register(ViewInventoryHandler::useOnPlayer);
+        UpdateChecker checker = new UpdateChecker(VERSION, LOGGER);
+        if (ModSettings.biceUpdateCheck) checker.check();
+        ServerPlayerEvents.JOIN.register(UpdateChecker::registerTip);
     }
 
     @Override
