@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "brine_carpet_addition",
+  "id": "blue_ice_carpet_extension",
   "version": "${version}",
-  "name": "BrineCarpetAddition",
+  "name": "BlueIceCarpetExtension",
   "description": "",
   "authors": [],
   "contact": {},
@@ -10,16 +10,16 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "top.saltwood.brine_carpet_addition.client.MainClient"
+      "top.saltwood.blue_ice_carpet_extension.client.MainClient"
     ],
     "main": [
-      "top.saltwood.brine_carpet_addition.Main"
+      "top.saltwood.blue_ice_carpet_extension.Main"
     ]
   },
   "mixins": [
-    "brine_carpet_addition.mixins.json",
+    "blue_ice_carpet_extension.mixins.json",
     {
-      "config": "brine_carpet_addition.client.mixins.json",
+      "config": "blue_ice_carpet_extension.client.mixins.json",
       "environment": "client"
     }
   ],

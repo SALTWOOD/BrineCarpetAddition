@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "top.saltwood.blue_ice_carpet_extension.client.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "MixinAnvilScreen"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

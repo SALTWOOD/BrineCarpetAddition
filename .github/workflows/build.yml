@@ -40,7 +40,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: brine_carpet_addition-release
+          name: blue_ice_carpet_extension-release
           path: build/libs/${{ env.JAR_NAME }}
 
       - name: Upload Artifact

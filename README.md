@@ -1,15 +1,15 @@
 <div align="center">
 
-![BrineCarpetAddition](https://socialify.git.ci/SALTWOOD/BrineCarpetAddition/image?description=1&font=Inter&forks=1&issues=1&language=1&name=1&owner=1&pattern=Plus&pulls=1&stargazers=1&theme=Auto)
+![BlueIceCarpetExtension](https://socialify.git.ci/SALTWOOD/BlueIceCarpetExtension/image?description=1&font=Inter&forks=1&issues=1&language=1&name=1&owner=1&pattern=Plus&pulls=1&stargazers=1&theme=Auto)
 
-# BrineCarpetAddition
+# BlueIceCarpetExtension
 
 ✨ **地毯模组的又一款拓展模组** ✨
 
-<a href="https://github.com/SALTWOOD/BrineCarpetAddition/stargazers"><img src="https://img.shields.io/github/stars/SALTWOOD/BrineCarpetAddition?color=ffcb47&label=Stars&logo=github&style=flat-square"></a>
-<a href="https://github.com/SALTWOOD/BrineCarpetAddition/network/members"><img src="https://img.shields.io/github/forks/SALTWOOD/BrineCarpetAddition?color=2ea44f&label=Forks&logo=github&style=flat-square"></a>
-<a href="https://github.com/SALTWOOD/BrineCarpetAddition/releases"><img src="https://img.shields.io/github/v/release/SALTWOOD/BrineCarpetAddition?color=6875f5&label=Latest%20Release&logo=githubrelease&style=flat-square"></a>
-<a href="https://github.com/SALTWOOD/BrineCarpetAddition/blob/master/LICENSE"><img src="https://img.shields.io/github/license/SALTWOOD/BrineCarpetAddition?color=00a3cc&label=License&style=flat-square"></a>
+<a href="https://github.com/SALTWOOD/BlueIceCarpetExtension/stargazers"><img src="https://img.shields.io/github/stars/SALTWOOD/BlueIceCarpetExtension?color=ffcb47&label=Stars&logo=github&style=flat-square"></a>
+<a href="https://github.com/SALTWOOD/BlueIceCarpetExtension/network/members"><img src="https://img.shields.io/github/forks/SALTWOOD/BlueIceCarpetExtension?color=2ea44f&label=Forks&logo=github&style=flat-square"></a>
+<a href="https://github.com/SALTWOOD/BlueIceCarpetExtension/releases"><img src="https://img.shields.io/github/v/release/SALTWOOD/BlueIceCarpetExtension?color=6875f5&label=Latest%20Release&logo=githubrelease&style=flat-square"></a>
+<a href="https://github.com/SALTWOOD/BlueIceCarpetExtension/blob/master/LICENSE"><img src="https://img.shields.io/github/license/SALTWOOD/BlueIceCarpetExtension?color=00a3cc&label=License&style=flat-square"></a>
 </div>
 
 > [!NOTE]
@@ -20,7 +20,7 @@
 > 因此我在阅读源码后，基于其原有逻辑与部分代码，移植并实现了其中的部分功能。
 
 > [!TIP]
-> 新功能请求请前往 [Issues](https://github.com/SALTWOOD/BrineCarpetAddition/issues) 反馈
+> 新功能请求请前往 [Issues](https://github.com/SALTWOOD/BlueIceCarpetExtension/issues) 反馈
 
 ## 功能列表
 

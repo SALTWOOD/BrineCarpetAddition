@@ -7,7 +7,7 @@ version = project.mod_version
 group = project.maven_group
 
 base {
-    archivesName = "brine_carpet_addition-mc${project.minecraft_version}-v${project.mod_version}"
+    archivesName = "blue_ice_carpet_extension-mc${project.minecraft_version}-v${project.mod_version}"
 }
 
 tasks.named('jar') { archiveVersion.set("") }
@@ -17,7 +17,7 @@ loom {
     splitEnvironmentSourceSets()
 
     mods {
-        "brine_carpet_addition" {
+        "blue_ice_carpet_extension" {
             sourceSet sourceSets.main
             sourceSet sourceSets.client
         }
