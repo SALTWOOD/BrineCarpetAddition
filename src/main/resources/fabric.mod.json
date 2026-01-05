@@ -4,6 +4,7 @@
   "version": "${version}",
   "name": "BlueIceCarpetExtension",
   "description": "",
+  "icon": "assets/blue_ice_carpet_extension/icon.png",
   "authors": [],
   "contact": {},
   "license": "All-Rights-Reserved",
