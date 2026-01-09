@@ -40,10 +40,10 @@ public abstract class MixinPlayerSkullBlock extends SkullBlock {
             if (deathInfo == null) return;
 
             // 1. Items
-            ItemScatterer.spawn(serverWorld, pos, deathInfo.inventory);
+            ItemScatterer.spawn(serverWorld, pos, deathInfo.inventory());
 
             // 2. Experience orbs
-            int xp = deathInfo.exp;
+            int xp = deathInfo.exp();
             while (xp > 0) {
                 int spawnedXp = ExperienceOrbEntity.roundToOrbSize(xp);
                 xp -= spawnedXp;
@@ -51,8 +51,8 @@ public abstract class MixinPlayerSkullBlock extends SkullBlock {
             }
 
             // 3. TextDisplay
-            if (deathInfo.display != null) {
-                Entity display = serverWorld.getEntity(deathInfo.display);
+            if (deathInfo.display() != null) {
+                Entity display = serverWorld.getEntity(deathInfo.display());
                 if (display != null) {
                     display.discard();
                 }
