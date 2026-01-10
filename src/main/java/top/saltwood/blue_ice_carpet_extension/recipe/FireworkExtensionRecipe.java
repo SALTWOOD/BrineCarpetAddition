@@ -9,17 +9,14 @@ import net.minecraft.recipe.SpecialCraftingRecipe;
 import net.minecraft.recipe.SpecialRecipeSerializer;
 import net.minecraft.recipe.book.CraftingRecipeCategory;
 import net.minecraft.recipe.input.CraftingRecipeInput;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.world.World;
-import top.saltwood.blue_ice_carpet_extension.Main;
 import top.saltwood.blue_ice_carpet_extension.ModSettings;
 
 import java.util.List;
 
 public class FireworkExtensionRecipe extends SpecialCraftingRecipe {
-    public static final RecipeSerializer<FireworkExtensionRecipe> FIREWORK_EXTENSION_SERIALIZER = new SpecialRecipeSerializer<>(FireworkExtensionRecipe::new);
+    public static final RecipeSerializer<FireworkExtensionRecipe> SERIALIZER = new SpecialRecipeSerializer<>(FireworkExtensionRecipe::new);
 
     public FireworkExtensionRecipe(CraftingRecipeCategory category) {
         super(category);
@@ -84,14 +81,6 @@ public class FireworkExtensionRecipe extends SpecialCraftingRecipe {
 
     @Override
     public RecipeSerializer<?> getSerializer() {
-        return FIREWORK_EXTENSION_SERIALIZER;
-    }
-
-    public static void register() {
-        Registry.register(
-                Registries.RECIPE_SERIALIZER,
-                Main.id("firework_extension"),
-                FIREWORK_EXTENSION_SERIALIZER
-        );
+        return SERIALIZER;
     }
 }

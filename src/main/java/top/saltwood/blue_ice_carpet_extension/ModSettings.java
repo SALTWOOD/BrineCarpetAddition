@@ -34,6 +34,9 @@ public class ModSettings {
     @Rule(categories = {MOD, RuleCategory.FEATURE, RuleCategory.SURVIVAL})
     public static boolean fireworkExtensionRecipe = false;
 
+    @Rule(categories = {MOD, RuleCategory.FEATURE, RuleCategory.SURVIVAL})
+    public static boolean shulkerBoxRecoloring = false;
+
     public enum PLAYER_SELECTOR {
         NOBODY, BOT, OPS, OPS_AND_SELF, EVERYONE
     }
