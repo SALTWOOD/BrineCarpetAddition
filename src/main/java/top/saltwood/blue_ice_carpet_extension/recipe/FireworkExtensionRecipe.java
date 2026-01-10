@@ -11,7 +11,6 @@ import net.minecraft.recipe.book.CraftingRecipeCategory;
 import net.minecraft.recipe.input.CraftingRecipeInput;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.world.World;
-import top.saltwood.blue_ice_carpet_extension.ModSettings;
 
 import java.util.List;
 
@@ -24,8 +23,6 @@ public class FireworkExtensionRecipe extends SpecialCraftingRecipe {
 
     @Override
     public boolean matches(CraftingRecipeInput input, World world) {
-        if (!ModSettings.fireworkExtensionRecipe) return false;
-
         int rocketCount = 0;
         int gunpowderCount = 0;
 

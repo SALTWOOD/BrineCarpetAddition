@@ -11,7 +11,6 @@ import net.minecraft.recipe.book.CraftingRecipeCategory;
 import net.minecraft.recipe.input.CraftingRecipeInput;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.world.World;
-import top.saltwood.blue_ice_carpet_extension.ModSettings;
 
 public class ShulkerBoxRecolorRecipe extends SpecialCraftingRecipe {
     public static final RecipeSerializer<ShulkerBoxRecolorRecipe> SERIALIZER = new SpecialRecipeSerializer<>(ShulkerBoxRecolorRecipe::new);
@@ -22,7 +21,6 @@ public class ShulkerBoxRecolorRecipe extends SpecialCraftingRecipe {
 
     @Override
     public boolean matches(CraftingRecipeInput input, World world) {
-        if (!ModSettings.shulkerBoxRecoloring) return false;
 
         int shulkerCount = 0;
         int dyeCount = 0;
