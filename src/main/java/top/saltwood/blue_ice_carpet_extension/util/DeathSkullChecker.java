@@ -81,6 +81,9 @@ public class DeathSkullChecker {
         while (world.getBlockState(pos).isOf(Blocks.BEDROCK)) {
             pos.setY(pos.getY() + 1);
         }
+
+        // What the hell?
+        if (pos.getY() > world.getTopY()) pos.setY(world.getTopY());
         return pos;
     }
 }
