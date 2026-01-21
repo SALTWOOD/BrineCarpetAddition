@@ -77,7 +77,7 @@ public class DeathSkullChecker {
         }
 
         // Lowest
-        pos.set(centerX, centerY, centerZ);
+        pos.set(centerX, world.getBottomY(), centerZ);
         while (world.getBlockState(pos).isOf(Blocks.BEDROCK)) {
             pos.setY(pos.getY() + 1);
         }

@@ -1,6 +1,7 @@
 package top.saltwood.blue_ice_carpet_extension.util;
 
 import net.minecraft.block.Blocks;
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.SkullBlockEntity;
 import net.minecraft.component.EnchantmentEffectComponentTypes;
 import net.minecraft.component.type.ProfileComponent;
@@ -24,7 +25,6 @@ import org.jetbrains.annotations.NotNull;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Objects;
 import java.util.UUID;
 
 public class DeathHandle {
@@ -53,22 +53,21 @@ public class DeathHandle {
 
         int experience = player.totalExperience / 2;
 
-        LocalDateTime now = LocalDateTime.now();
-        long timestamp = now.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
-        String formattedTime = now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"));
+        BlockPos skullPos = DeathSkullChecker.findSkullPos(player);
+        world.setBlockState(skullPos, Blocks.PLAYER_HEAD.getDefaultState(), 3);
+        BlockEntity blockEntity = world.getBlockEntity(skullPos);
+        if (!(blockEntity instanceof SkullBlockEntity skullEntity)) return;
 
         items.clear();
         player.experienceLevel = 0;
         player.playerScreenHandler.sendContentUpdates();
 
-        BlockPos skullPos = DeathSkullChecker.findSkullPos(player);
-        world.setBlockState(skullPos, Blocks.PLAYER_HEAD.getDefaultState(), 3);
-        SkullBlockEntity skullEntity = (SkullBlockEntity) world.getBlockEntity(skullPos);
-
-        Objects.requireNonNull(skullEntity);
-
         ProfileComponent playerProfileComponent = new ProfileComponent(player.getGameProfile());
         skullEntity.setOwner(playerProfileComponent);
+
+        LocalDateTime now = LocalDateTime.now();
+        long timestamp = now.atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+        String formattedTime = now.format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"));
 
         DisplayEntity.TextDisplayEntity display = new DisplayEntity.TextDisplayEntity(EntityType.TEXT_DISPLAY, world);
         display.setBillboardMode(DisplayEntity.BillboardMode.CENTER);
